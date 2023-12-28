@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="flatpickr.css" />
+  <script src="flatpickr.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="header_text">Choose Date and Time</h1>
+    </div>
+    <!-- Flatpickr date and time picker -->
+    <div class="calendar-container">
+      <label for="datePicker">Select Date:</label>
+      <input type="text" id="datePicker" placeholder="Select date">
+    </div>
+    <div class="time-picker-container">
+      <label for="timePicker">Select Time:</label>
+      <input type="text" id="timePicker" placeholder="Select time">
+    </div>
+  </div>
+
+  <script>
+    // Initialize flatpickr for date and time pickers
+    flatpickr("#datePicker", {
+      enableTime: false, // Set to true if you want to enable time selection
+      dateFormat: "Y-m-d",
+    });
+
+    flatpickr("#timePicker", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+    });
+  </script>
+</body>
+</html>

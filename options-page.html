@@ -1,0 +1,53 @@
+<!-- options-page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+  <div class="container">
+    <div>
+      <h1 class="header_text">Choose One Option</h1>
+    </div>
+    <div class="options-container">
+      <button class="option-btn" onclick="selectOption('movie')">1. Movie</button>
+      <button class="option-btn" onclick="selectOption('restaurant')">2. Restaurant</button>
+      <button class="option-btn" onclick="selectOption('college')">3. College Pickup</button>
+      <button class="option-btn" onclick="selectOption('outOfStation')">4. Out of Station (Jindal)</button>
+    </div>
+  </div>
+
+  <script>
+    function selectOption(option) {
+      // You can perform actions based on the selected option
+      switch (option) {
+        case 'movie':
+          // Code for handling the movie option
+          redirectToResultPage();
+          break;
+        case 'restaurant':
+          // Code for handling the restaurant option
+          redirectToResultPage();
+          break;
+        case 'college':
+          // Code for handling the college option
+          redirectToResultPage();
+          break;
+        case 'outOfStation':
+          // Code for handling the out-of-station option
+          redirectToResultPage();
+          break;
+        default:
+          // Handle unexpected cases
+          alert('Invalid option');
+      }
+    }
+
+    function redirectToResultPage() {
+      // Redirect to the result page with the blue tick animation
+      window.location.href = 'result-page.html';
+    }
+  </script>
+</body>
+</html>
